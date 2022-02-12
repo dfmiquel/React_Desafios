@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ItemCount = ({ stock, initial }) => {
+export const ItemCount = ({ stock, initial }) => {
   const [count, setCount] = useState(initial);
 
   const onDecrease = () => {
@@ -37,4 +37,4 @@ const ItemCount = ({ stock, initial }) => {
     </div>
   );
 };
-export default ItemCount;
+

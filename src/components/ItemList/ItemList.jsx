@@ -1,16 +1,18 @@
-import Item from "./Item";
+import Item from "../Item/Item";
 
 const ItemList = ({ products }) => {
   return (
     <div>
+
       {products.map((product) => {
         return (
           <Item
-            key={product.id}
-            title={product.title}
-            pictureUrl={product.pictureUrl}
-            price={product.price}
+            category={product.category}
             description={product.description}
+            pictureUrl={product.image}
+            price={product.price}
+            rating={product.rating}
+            title={product.title}
           />
         );
       })}

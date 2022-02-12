@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 // import getData from "../Services/getData.js";
 // import ItemCount from "./ItemCount.jsx";
-import ItemList from "./ItemList";
+import ItemList from "../ItemList/ItemList.jsx";
 import axios from "axios";
 
 const ItemListContainer = ({ greeting }) => {
@@ -10,9 +10,10 @@ const ItemListContainer = ({ greeting }) => {
 
   const getProducts = async () => {
     const getDataProducts = await axios.get(
-      "https://franncode.vercel.app/api/products"
+      "https://fakestoreapi.com/products"
     );
     const productsResponse = getDataProducts.data;
+    console.log(productsResponse);
     setProducts(productsResponse);
   };
   useEffect(() => {
