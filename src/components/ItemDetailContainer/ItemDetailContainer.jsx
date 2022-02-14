@@ -11,7 +11,6 @@ export const ItemDetailContainer = ({id}) => {
     useEffect(() => {
         const getItem = async () => {
             const getDataItem = await axios.get(
-                // `https://fakestoreapi.com/products/5`
                 `https://fakestoreapi.com/products/${id}`
             );
             const itemResponse = getDataItem.data;

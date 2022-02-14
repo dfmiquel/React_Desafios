@@ -10,8 +10,7 @@ const ItemListContainer = ({ greeting }) => {
 
   const getProducts = async () => {
     const getDataProducts = await axios.get(
-      "https://fakestoreapi.com/products"
-    );
+      "https://fakestoreapi.com/products");
     const productsResponse = getDataProducts.data;
     console.log(productsResponse);
     setProducts(productsResponse);
