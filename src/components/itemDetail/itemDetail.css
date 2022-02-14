@@ -18,11 +18,11 @@
     font-size: 20px;
   }
   
-  .image {
-    width: 10px;
+  /* .image {
+    width: 200px;
   
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  }
+  } */
   .span {
     font-weight: bold;
   }

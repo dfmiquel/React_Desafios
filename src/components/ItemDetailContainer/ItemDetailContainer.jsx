@@ -4,15 +4,15 @@ import axios from "axios";
 import { ItemDetail } from "../itemDetail/itemDetail.jsx";
 import styles from "./itemDetailContainer.css";
 
-export const ItemDetailContainer = () => {
+export const ItemDetailContainer = ({id}) => {
     const { productID } = useParams();
     const [item, setItem] = useState([]);
 
     useEffect(() => {
         const getItem = async () => {
             const getDataItem = await axios.get(
-                `https://fakestoreapi.com/products/1`
-                // `https://fakestoreapi.com/products/${productID}`
+                // `https://fakestoreapi.com/products/5`
+                `https://fakestoreapi.com/products/${id}`
             );
             const itemResponse = getDataItem.data;
             // console.log(itemResponse);

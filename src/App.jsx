@@ -11,7 +11,7 @@ function App() {
       <header className="App-header">
         <NavBar/>
         {/* <ItemListContainer greeting="Bienvenidos a MovieFan" /> */}
-        <ItemDetailContainer />
+        <ItemDetailContainer id={5}/>
       </header>
     </div>
   );
