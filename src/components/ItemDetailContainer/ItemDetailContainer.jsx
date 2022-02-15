@@ -4,14 +4,15 @@ import axios from "axios";
 import { ItemDetail } from "../itemDetail/itemDetail.jsx";
 import styles from "./itemDetailContainer.css";
 
-export const ItemDetailContainer = ({id}) => {
-    const { productID } = useParams();
+export const ItemDetailContainer = () => {
+    const { productId } = useParams();
     const [item, setItem] = useState([]);
 
     useEffect(() => {
         const getItem = async () => {
+             
             const getDataItem = await axios.get(
-                `https://fakestoreapi.com/products/${id}`
+                `https://fakestoreapi.com/products/${productId}`
             );
             const itemResponse = getDataItem.data;
             // console.log(itemResponse);
@@ -19,7 +20,7 @@ export const ItemDetailContainer = ({id}) => {
             // console.log("SetItem", setItem);
         };
         getItem();
-    }, [productID]);
+    }, [productId]);
 
     console.log(item, "Soy el item Seleccionado(VERDADERO)");
     console.log(item.image, "Soy el item Seleccionado(VERDADERO-2)");

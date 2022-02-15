@@ -9,8 +9,7 @@ export const Home = () => {
       <div className="Home">
         <header className="App-header">
           <NavBar/>
-          <ItemListContainer greeting="Bienvenidos a MovieFan" />
-          {/* <ItemDetailContainer id={5}/> */}
+          <h1> Bienvenidos a MovieFan</h1>
         </header>
       </div>
     );

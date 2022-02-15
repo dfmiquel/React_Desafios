@@ -1,6 +1,7 @@
 
 import "./item.css";
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 
@@ -28,8 +29,12 @@ const Item = ({ id,category, description, pictureUrl, price, rating, title }) =>
 
       <>
     <div className="product">
+
+    <Link to={`/products/${id}`}>
       <h2 className="title">{title}</h2>
       <img className="image" src={pictureUrl} alt="product image" />
+      <p>Ver Detalle</p>
+    </Link>
       <span className="data">
       <p className="ID">{id}</p>
         <p className="price">${price}</p>

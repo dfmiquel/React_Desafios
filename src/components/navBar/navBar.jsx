@@ -1,9 +1,10 @@
-import './navBar.css';
+import styles from './navBar.css';
+import { Link, NavLink } from "react-router-dom";
 import CartWidget from '../cartWidget/cartWidget.jsx'
 
 export const NavBar = () => {
     return (
-        <nav className="navBar">
+        <nav className={styles.navBar}>
             <h1>MovieFan</h1>
             <p>
                 La Página de los Fanáticos de las Películas!!!!!
@@ -13,14 +14,24 @@ export const NavBar = () => {
                 <head>
                 </head>
                 <body>
-                    <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Películas</a></li>
-                        <li><a href="#">Posters</a></li>
-                        <li><a href="#">Coleccionables</a></li>
-                        <li><a href="#">Sobre Nosotros</a></li>
+                    <ul className={styles.listaMenu}>
+                        <li>
+                            <NavLink
+                                exact
+                                className={styles.link}
+                                activeClassName={styles.activeLink}
+                                to="/"
+                            >
+                                Home
+                            </NavLink>
+                            {/* <Link to={"/"}>Inicio</Link> */}
+                        </li>
+                        <li><Link to={"/products"}>Productos</Link></li>
+                        <li><Link to={"/category"}>Categorias</Link></li>
+                        <li><Link to={"/cart"}>Carrito</Link></li>
+                        <li><Link to={"/abautUs"}>Sobre Nosotros</Link></li>
                         <CartWidget />
-                    </ul>                   
+                    </ul>
                 </body>
             </html>
 

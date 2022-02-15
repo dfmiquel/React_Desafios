@@ -7,7 +7,9 @@ import { Category } from './pages/category';
 import { Error } from './pages/error';
 import { Products } from './pages/products';
 import { ProductsDetail } from './pages/productDetail';
-import { NavBar } from "./components/navBar/navBar"
+import { NavBar } from "./components/navBar/navBar";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+
 
 export const App = () => {
   return (
@@ -26,8 +28,9 @@ export const App = () => {
         <Route exact path="/products">
             <Products />
           </Route>
-          <Route exact path="/productsDetail">
+          <Route exact path="/products/:productId">
             <ProductsDetail />
+			{/* <ItemDetailContainer /> */}
           </Route>
 				<Route path='*'>
 					<Error />
