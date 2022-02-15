@@ -1,5 +1,6 @@
 
 
+import "./app.css";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Home } from './pages/home.jsx';
 import { Cart } from './pages/cart';
@@ -7,8 +8,7 @@ import { Category } from './pages/category';
 import { Error } from './pages/error';
 import { Products } from './pages/products';
 import { ProductsDetail } from './pages/productDetail';
-import { NavBar } from "./components/navBar/navBar";
-import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+
 
 
 export const App = () => {

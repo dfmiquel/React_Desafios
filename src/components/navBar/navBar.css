@@ -2,13 +2,12 @@
 /* Barra de Navegación */
 
 .navbar {
-  display: flex;
+  display: block;
   justify-content: space-between;
   background-color: rgba(137, 43, 226, 0.493);
-
   width: 100%;
 }
-.listaMenu {
+listaMenu {
   display: flex;
 }
 
@@ -17,7 +16,7 @@
 }
 .link {
   padding: 1em;
-  color: blue;
+  color: white;
 }
 
 .activeLink {
@@ -26,7 +25,7 @@
 }
 
 ul {
-    /* display: inline-block; */
+    display: inline-block;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -48,23 +47,22 @@ ul {
 
   ul img {
     justify-content:left;
-  }
+  } */
   
   /* Change the link color to #111 (black) on hover */
   li a:hover {
     background-color: #111;
   }
   
-  .img {
+  img {
     border: 1px solid rgb(238, 32, 32);
     border-radius: 4px;
     padding: 5px;
     width: 50px;
   }
   
-  .img:hover {
+  img:hover {
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
   }
 
 
-/* ################################################# */

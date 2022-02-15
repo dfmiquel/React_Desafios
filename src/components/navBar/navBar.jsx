@@ -1,10 +1,10 @@
-import styles from './navBar.css';
+import "./navBar.css";
 import { Link, NavLink } from "react-router-dom";
 import CartWidget from '../cartWidget/cartWidget.jsx'
 
 export const NavBar = () => {
     return (
-        <nav className={styles.navBar}>
+        <nav className="navBar">
             <h1>MovieFan</h1>
             <p>
                 La Página de los Fanáticos de las Películas!!!!!
@@ -14,12 +14,12 @@ export const NavBar = () => {
                 <head>
                 </head>
                 <body>
-                    <ul className={styles.listaMenu}>
+                    <ul className="ul">
                         <li>
                             <NavLink
                                 exact
-                                className={styles.link}
-                                activeClassName={styles.activeLink}
+                                className="link"
+                                activeClassName="activeLink"
                                 to="/"
                             >
                                 Home
