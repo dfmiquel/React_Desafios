@@ -5,6 +5,14 @@ import { useState } from "react";
 
 
 export const ItemDetail = ({ price, pictureUrl, productItem, description }) => {
+
+  const [showComponent, setShowComponent] = useState(true);
+  const [chosenItem, setChosenItem] = useState();
+  const addItem = (e) => {
+    setChosenItem(e.target.value);
+    setShowComponent(false);
+  };
+  console.log("cantidad del producto", chosenItem,{ItemCount});
   return (
 
     <div className={styles.container}>
@@ -15,7 +23,18 @@ export const ItemDetail = ({ price, pictureUrl, productItem, description }) => {
         <h2>${price}</h2>
         <h2>{description}</h2>
       </div>
-      <ItemCount stock={15} initial={1} />
+      {showComponent ? (
+      <ItemCount stock={15} initial={1} onAdd={addItem}/>
+      ) : (
+        <div>
+        <p>
+          Adquiriste exitosamente {chosenItem} unidades de {productItem}
+        </p>
+        <Link to="/cart">Ir al carrito</Link>
+      </div>
+
+
+      )}
     </div>
 
   );
